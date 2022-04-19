@@ -4,12 +4,13 @@ class ScoresController < ApplicationController
 
 require 'soda/client'
 
-client = SODA::Client.new({:domain => "data.cityofnewyork.us", :app_token => "cjRlFqsOAbL2DWXr9sBWcuYDt"})
+def index
+  client = SODA::Client.new({:domain => "https://data.cityofnewyork.us/resource/f9bf-2cp4.json", :app_token => })
 
-results = client.get("f9bf-2cp4", :$limit => 5000)
+  results = client.get("https://data.cityofnewyork.us/Education/2012-SAT-Results/f9bf-2cp4", :$limit => 5000)
 
-puts "Got #{results.count} results. Dumping first results:"
-results.first.each do |k, v|
-  puts "#{key}: #{value}"
+puts "Got #{results} results. Dumping first results:"
+# results.first.each do |k, v|
+#   puts "#{key}: #{value}"
 end
 end
