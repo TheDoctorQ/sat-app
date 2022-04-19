@@ -1,0 +1,4 @@
+GET http://localhost:3000/scores
+
+###
+GET https://data.cityofnewyork.us/resource/f9bf-2cp4.json
